@@ -1,0 +1,359 @@
+.main {
+  width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.videoBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10, 31, 61, 0.4), rgba(10, 31, 61, 0.8));
+  z-index: -1;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+  padding: 0 var(--space-xl);
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: var(--space-md);
+  color: white;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: var(--space-4xl) 0;
+  background-color: var(--surface);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.aboutText h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+.aboutText p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+}
+
+.aboutImage {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ROOMS SECTION */
+.rooms {
+  padding: var(--space-4xl) 0;
+  background-color: var(--background);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.sectionHeader p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.roomsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.roomCard {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.roomCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.roomImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.roomImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.roomCard:hover .roomImage img {
+  transform: scale(1.05);
+}
+
+.roomContent {
+  padding: var(--space-lg);
+}
+
+.roomContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.roomAmenities {
+  display: flex;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+  color: var(--text-secondary);
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.9rem;
+}
+
+/* FACILITIES SECTION */
+.facilities {
+  padding: var(--space-4xl) 0;
+  background-color: var(--primary);
+  color: white;
+}
+
+.facilities .sectionHeader h2 {
+  color: white;
+}
+
+.facilities .sectionHeader p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2xl);
+}
+
+.facilityItem {
+  text-align: center;
+  padding: var(--space-xl);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.facilityItem:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  margin-bottom: var(--space-md);
+  color: white;
+}
+
+.facilityItem h4 {
+  color: white;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-body);
+}
+
+.facilityItem p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* GALLERY SECTION */
+.gallery {
+  padding: var(--space-4xl) 0;
+  background-color: var(--surface);
+}
+
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap: var(--space-md);
+}
+
+.galleryItem {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.1);
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: var(--space-4xl) 0;
+  background-color: var(--background);
+}
+
+.contactContainer {
+  display: flex;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.contactInfo {
+  flex: 1;
+  padding: var(--space-3xl);
+  background-color: var(--primary);
+  color: white;
+}
+
+.contactInfo h2 {
+  color: white;
+  margin-bottom: var(--space-xl);
+}
+
+.infoBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.infoBlock h4 {
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+  font-family: var(--font-body);
+}
+
+.infoBlock p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mapContainer {
+  flex: 1.5;
+  background-color: #eee;
+  position: relative;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-style: italic;
+  min-height: 400px;
+  position: relative;
+}
+
+.mapPlaceholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+  .mapContainer {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .wide, .tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
