@@ -47,6 +47,9 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} Hotel Classic (Classic Lodge). All rights reserved.</p>
+          <p className={styles.credit}>
+            Designed by <a href="https://www.digitaldictionary.in" target="_blank" rel="noopener noreferrer">Digital Dictionary</a>
+          </p>
         </div>
       </div>
     </footer>
