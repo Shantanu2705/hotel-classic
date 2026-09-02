@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -8,9 +9,9 @@ export default function Footer() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.brand}>
-            <div className={styles.logo}>
-              HOTEL<span>CLASSIC</span>
-            </div>
+            <Link href="/" className={styles.logo}>
+              <Image src="/logo.png" alt="Hotel Classic Logo" width={220} height={60} style={{ objectFit: 'contain' }} />
+            </Link>
             <p className={styles.description}>
               Experience premium comfort and unmatched hospitality at Siliguri's finest destination for travelers.
             </p>
@@ -35,11 +36,18 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <Phone size={20} />
-                <span>+91 99999 99999<br/><small>(Update with real number)</small></span>
+                <div className={styles.contactLinks}>
+                  <a href="tel:+919434479413" title="Call us directly from your phone!" className={styles.contactLink}>+91 9434479413</a>
+                  <a href="tel:+917477523325" title="Call us directly from your phone!" className={styles.contactLink}>+91 7477523325</a>
+                </div>
               </div>
               <div className={styles.contactItem}>
                 <Mail size={20} />
-                <span>info@hotelclassic.com</span>
+                <a href="mailto:hotelclassicsiliguri@gmail.com" title="Send us an email!" className={styles.contactLink}>hotelclassicsiliguri@gmail.com</a>
+              </div>
+              <div className={styles.contactItem}>
+                <MessageCircle size={20} />
+                <a href="https://wa.me/919434479413" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp!" className={styles.contactLink}>WhatsApp: +91 9434479413</a>
               </div>
             </div>
           </div>

@@ -102,3 +102,20 @@
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactLink {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contactLink:hover {
+  color: var(--accent);
+}

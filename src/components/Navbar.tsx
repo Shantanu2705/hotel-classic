@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
@@ -25,7 +26,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <Link href="/" className={styles.logo}>
-        HOTEL<span>CLASSIC</span>
+        <Image src="/logo.png" alt="Hotel Classic Logo" width={200} height={55} style={{ objectFit: 'contain' }} />
       </Link>
       
       <div className={styles.navLinks}>

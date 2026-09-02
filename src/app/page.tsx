@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
 import { motion } from 'framer-motion';
-import { Wifi, Car, Utensils, Droplets, MapPin, Phone, Wind, Shield } from 'lucide-react';
+import { Wifi, Car, Utensils, Droplets, MapPin, Phone, Wind, Shield, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 const fadeUp = {
@@ -219,7 +219,20 @@ export default function Home() {
                   <Phone size={24} color="var(--accent)" />
                   <div>
                     <h4>Phone</h4>
-                    <p>+91 99999 99999</p>
+                    <div className={styles.contactLinks}>
+                      <a href="tel:+919434479413" title="Call us directly from your phone!" className={styles.contactLink}>+91 9434479413</a>
+                      <a href="tel:+917477523325" title="Call us directly from your phone!" className={styles.contactLink}>+91 7477523325</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.infoBlock}>
+                  <Mail size={24} color="var(--accent)" />
+                  <div>
+                    <h4>Email</h4>
+                    <div className={styles.contactLinks}>
+                      <a href="mailto:hotelclassicsiliguri@gmail.com" title="Send us an email!" className={styles.contactLink}>hotelclassicsiliguri@gmail.com</a>
+                    </div>
                   </div>
                 </div>
 
